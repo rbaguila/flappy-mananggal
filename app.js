@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded' , () => {
         if (e.keyCode === 32) {
             jump()
         }
+        console.log(e)
+    }
+
+    function mouseControl(e) {
+        jump()
     }
 
     function jump() {
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         // console.log(birdBottom)
     }
     document.addEventListener('keyup', control)
+    document.addEventListener('mousedown', mouseControl)
 
 
     function generateObstacle() {
@@ -75,7 +81,7 @@ document.addEventListener('DOMContentLoaded' , () => {
             }
 
             if (obstacleLeft > 213 && obstacleLeft < 215){
-              console.log(obstacleLeft)
+              // console.log(obstacleLeft)
               points += 1
             }
         }
